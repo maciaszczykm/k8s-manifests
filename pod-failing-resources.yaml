@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: failing-resources
+spec:
+  containers:
+    - name: app
+      image: busybox
+      resources:
+        requests:
+          memory: "500Gi"
+      command: ["sleep", "3600"]
