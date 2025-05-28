@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: failing
+  namespace: default
+spec:
+  containers:
+    - name: app
+      image: nonexisting-image:latest
+      ports:
+        - containerPort: 80
